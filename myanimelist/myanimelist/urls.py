@@ -9,4 +9,5 @@ urlpatterns = [
     # path('', views.index, name="index"),
     path('', include("api.urls")),
     path('news/', include("news.urls")),
+    path('animelist/', include("animelist.urls")),
 ]
