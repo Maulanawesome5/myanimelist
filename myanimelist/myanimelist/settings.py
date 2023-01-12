@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    "api.apps.ApiConfig",
+    "rest_framework",
+    "news",
 ]
 
 MIDDLEWARE = [
@@ -75,8 +79,17 @@ WSGI_APPLICATION = 'myanimelist.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'myanimelist',
+        'USER': 'root',
+        'PASSWORD': 'admin123',
+        'HOST': 'localhost',
+        'PORT': 3307,
+        'OPTIONS' : {
+            'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     }
 }
 
