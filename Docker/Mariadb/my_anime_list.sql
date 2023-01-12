@@ -84,26 +84,6 @@
 
 --
 
--- Dumping data for table `anime_studio`
-
---
-
--- LOCK TABLES `anime_studio` WRITE;
-
-/*!40000 ALTER TABLE `anime_studio` DISABLE KEYS */
-
-;
-
--- INSERT INTO `anime_studio` VALUES (1,'8bit','Japan'),(2,'A-1 Pictures','Japan'),(3,'AIC PLUS+','Japan'),(4,'Ajia-Do','Japan'),(5,'APPP','Japan'),(6,'Arms','Japan'),(7,'asread','Japan'),(8,'Barnum Studio','Japan'),(9,'Bibury Animation Studios','Japan'),(10,'CloverWorks','Japan'),(11,'Connect','Japan'),(12,'DR Movie','Japan'),(13,'feel.','Japan'),(14,'GAINAX','Japan'),(15,'GEEK TOYS','Japan'),(16,'Geneon Universal Entertainment','Japan'),(17,'Gonzo','Japan'),(18,'Graphinica','Japan'),(19,'Hoods Entertainment','Japan'),(20,'J.C.Staff','Japan'),(21,'Khara','Japan'),(22,'Kinema Citrus','Japan'),(23,'Lerche','Japan'),(24,'LIDENFILMS','Japan'),(25,'Madhouse','Japan'),(26,'MAPPA','Japan'),(27,'NARA Animation','Japan'),(28,'PASSIONE','Japan'),(29,'Production I.G','Japan'),(30,'Production IMS','Japan'),(31,'Production Reed','Japan'),(32,'Satelight','Japan'),(33,'Seven','Japan'),(35,'Seven Arcs Pictures','Japan'),(36,'SHAFT','Japan'),(37,'Signal.MD','Japan'),(38,'SILVER LINK.','Japan'),(39,'Studio Deen','Japan'),(40,'Sunrise','Japan'),(41,'TMS Entertainment','Japan'),(42,'TNK','Japan'),(43,'Tezuka Productions','Japan'),(44,'Trigger','Japan'),(45,'ufotable','Japan'),(46,'White Fox','Japan'),(47,'Xebec','Japan'),(48,'Actas Inc.','Japan'),(49,'anima inc.','Japan'),(50,'Asahi Production','Japan'),(51,'Ashi Production','Japan'),(52,'AXsiZ','Japan'),(53,'Bandai Namco Pictures','Japan'),(54,'Bridge','Japan'),(55,'C2C','Japan'),(56,'C-Station','Japan'),(57,'Chaos Project','Japan'),(58,'CoMix Wave Films','Japan'),(59,'Creators in Pack','Japan'),(60,'CygamesPictures','Japan'),(61,'Daume','Japan'),(62,'David Production','Japan'),(63,'Dax International','Japan'),(64,'Digital Frontier','Japan'),(65,'Diomedea','Japan'),(66,'DLE','Japan'),(67,'Doga Kobo','Japan'),(68,'Drive','Japan'),(69,'Dwarf','Japan'),(70,'Eiken','Japan'),(71,'EMT Squared','Japan'),(72,'G&G Direction','Japan'),(73,'Gansis','Japan'),(74,'GEMBA','Japan'),(75,'Geno Studio','Japan'),(76,'GoHands','Japan'),(77,'Group TAC','Japan'),(78,'Hal Film Maker','Japan'),(79,'Imagin','Japan'),(80,'Kitty Films','Japan'),(81,'Knack Productions','Japan'),(82,'Kokusai Eiga-sha','Japan'),(83,'Kyoto Animation','Japan'),(84,'Lay-duce','Japan'),(85,'Magia Doraglier','Japan'),(86,'Magic Bus','Japan'),(87,'Manglobe','Japan'),(88,'Millepensee','Japan'),(89,'MOM Productions','Japan'),(90,'Mook Animation','Japan'),(91,'M.S.C','Japan'),(92,'Mushi Production','Japan'),(93,'NAZ','Japan'),(94,'Nexus','Japan'),(95,'Nippon Animation, Tokio','Japan'),(96,'Nomad','Japan'),(97,'Office Academy','Japan'),(98,'OLM','Japan'),(99,'Ordet','Japan'),(100,'P.A.Works','Japan'),(101,'Oh! Production','Japan'),(102,'Pacific Animation Corporation','Japan'),(103,'Pierrot','Japan'),(104,'Pierrot Plus','Japan'),(105,'Pine Jam','Japan'),(106,'Polygon Pictures','Japan'),(107,'Project No.9','Japan'),(108,'Radix','Japan'),(109,'Sanzigen','Japan'),(110,'Science Saru','Japan'),(111,'Shin-Ei Animation','Japan'),(112,'Shirogumi Inc.','Japan'),(113,'Shogakukan Music & Digital Entertainment','Japan'),(114,'Shuka','Japan'),(115,'Sola Digital Arts','Japan'),(116,'Studio Comet','Japan'),(117,'Studio Chizu','Japan'),(118,'Studio Fantasia','Japan'),(119,'Studio Ghibli, Inc.','Japan'),(120,'Studio Gokumi','Japan'),(121,'Studio Hibari','Japan'),(122,'Studio Live','Japan'),(123,'Studio Nue','Japan'),(124,'Studio Ponoc','Japan'),(125,'Studio VOLN','Japan'),(126,'SynergySP','Japan'),(127,'Tatsunoko Production','Japan'),(128,'Telecom Animation Film','Japan'),(129,'Toei Animation','Japan'),(130,'Top Craft','Japan'),(131,'Trans Arts','Japan'),(132,'Triangle Staff','Japan'),(133,'Troyca','Japan'),(134,'Tsuchida Production','Japan'),(135,'Vega Entertainment','Japan'),(136,'Video Tokyo Production','Japan'),(137,'Walt Disney Animation Japan','Japan'),(138,'Walt Disney Television Japan','Japan'),(139,'WAO World','Japan'),(140,'Wit Studio','Japan'),(141,'Yumeta Company','Japan'),(142,'Zexcs','Japan'),(143,'Zero-G','Japan');
-
-/*!40000 ALTER TABLE `anime_studio` ENABLE KEYS */
-
-;
-
--- UNLOCK TABLES;
-
---
-
 -- Table structure for table `animelist_anime`
 
 --
