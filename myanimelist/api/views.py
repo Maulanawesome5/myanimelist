@@ -6,6 +6,26 @@ from rest_framework.response import Response
 @api_view(["GET"])
 def getRoutes(self):
     routes = {
+        "animelist" : [
+            {
+                "Endpoint" : "/anime/",
+                "method" : "GET",
+                "body" : None,
+                "description" : "Menampilkan daftar anime yang ada dalam database."
+            },
+            {
+                "Endpoint" : "/anime/id",
+                "method" : "GET",
+                "body" : None,
+                "description" : "Menampilkan satu data anime sesuai dengan MAL ID"
+            },
+            {
+                "Endpoint" : "/anime/id/delete",
+                "method" : "DELETE",
+                "body" : None,
+                "description" : "Menghapus satu data anime sesuai dengan MAL ID"
+            },
+        ],
         "news" : [
             {
                 "Endpoint" : "/news/",

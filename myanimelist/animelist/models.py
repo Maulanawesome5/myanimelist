@@ -11,7 +11,7 @@ class Anime(models.Model):
     studio = models.CharField(max_length=50, blank=True)
     slug = models.SlugField(blank=True, max_length=255, editable=False)
 
-    def save(self):
+    def save(self, force_insert=True, force_update=True):
         self.slug = slugify(self.anime_title)
         super(Anime, self).save()
 
