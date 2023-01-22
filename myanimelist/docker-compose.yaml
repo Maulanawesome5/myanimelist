@@ -1,17 +1,30 @@
 version: '3.8'
 
 services:
+  db:
+    image: mariadb:latest
+    container_name: db_animelist_2023
+    ports:
+      - "3306:3306/tcp"
+    environment:
+      - MYSQL_DATABASE="myanimelist"
+      - MYSQL_ROOT_PASSWORD="admin12345"
+      - MYSQL_HOST=""
+    volumes:
+      - /tmp/app/mysqld:/var/run/mysqld
+      - ./db:/var/lib/mysql
+  
   app:
     build: .
     volumes:
       - .:/myanimelist
+      - /tmp/app/mysqld:/run/mysqld
     expose:
       - 8000
     ports:
       - "8000:8000/tcp"
     image: aplikasi:django
-    container_name: animelist
+    container_name: app_animelist_2023
     command: python manage.py runserver 0.0.0.0:8000
-
-volumes:
-  mobilepro:
+    depends_on:
+      - db
