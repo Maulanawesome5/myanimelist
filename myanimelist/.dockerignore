@@ -1,0 +1,4 @@
+# ignore file atau folder dari workspace ini
+# supaya tidak di commit saat pembuatan container
+.vscode
+db
