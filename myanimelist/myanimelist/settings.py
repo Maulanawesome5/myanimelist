@@ -89,7 +89,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': 3306,
         'OPTIONS' : {
-            # 'auth_plugin' : "mysql_native_password",
+            'auth_plugin' : "mysql_native_password",
             'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'",
         },
     }
