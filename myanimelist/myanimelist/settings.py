@@ -38,10 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    "api.apps.ApiConfig",
-    "rest_framework",
-    "news",
-    "animelist",
+    # "api.apps.ApiConfig",
+    # "rest_framework",
+    # "news",
+    # "animelist",
 ]
 
 MIDDLEWARE = [
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'myanimelist.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,13 +83,13 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myanimelist',
+        'NAME': 'myanimelist_indonesia',
         'USER': 'root',
-        'PASSWORD': 'admin12345',
+        'PASSWORD': 'root',
         'HOST': 'localhost',
-        'PORT': 3306,
+        'PORT': 3307,
         'OPTIONS' : {
-            'auth_plugin' : "mysql_native_password",
+            # 'auth_plugin' : "mysql_native_password",
             'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'",
         },
     }
