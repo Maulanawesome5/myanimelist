@@ -2,3 +2,4 @@
 # supaya tidak di commit saat pembuatan container
 .vscode
 db
+Env
