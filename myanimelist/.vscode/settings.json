@@ -1,4 +1,5 @@
 {
+    "editor.formatOnSave": false,
     "editor.minimap.autohide": true,
     "python.defaultInterpreterPath": ".\\Env\\Scripts\\python.exe",
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
