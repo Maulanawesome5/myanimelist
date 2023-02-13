@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     # Django apps untuk membuat REST server
     "api.apps.ApiConfig",
     "rest_framework",
+
+    # Modul untuk handling CORS
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
@@ -52,6 +55,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+    # Modul untuk handling CORS
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = 'myanimelist.urls'
@@ -141,3 +147,6 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Cross Origin Resource Sharing
+CORS_ALLOW_ALL_ORIGINS = True
