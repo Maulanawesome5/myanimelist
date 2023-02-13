@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # Django apps untuk membuat REST server
+    "api.apps.ApiConfig",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
@@ -80,10 +84,10 @@ DATABASES = {
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.mysql',
         'NAME': "myanimelist_indonesia",
-        'USER': os.getenv("MARIADB_USER"),
-        'PASSWORD': "Mandala281",
+        'USER': "root",
+        'PASSWORD': "",
         'HOST': "localhost",
-        'PORT': os.getenv("MARIADB_DATABASE_PORT"),
+        'PORT': 3306,
         'OPTIONS': {
             'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'",
         },
