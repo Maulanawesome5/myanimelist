@@ -13,9 +13,9 @@ class Anime(models.Model):
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 
-    def save(self, force_insert=True, force_update=True):
+    def save(self, *args, **kwargs):
         self.slug = slugify(self.anime_title)
-        super(Anime, self).save()
+        super(Anime, self).save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.id}. {self.anime_title}"
