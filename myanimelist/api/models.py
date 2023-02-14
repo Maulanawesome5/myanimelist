@@ -6,7 +6,7 @@ from django.utils.text import slugify
 class Anime(models.Model):
     mal_id = models.IntegerField(unique=True)
     anime_title = models.CharField(max_length=255)
-    anime_score = models.DecimalField(decimal_places=2, max_digits=10)
+    anime_score = models.DecimalField(decimal_places=2, max_digits=10, default=0)
     airing_time = models.CharField(max_length=50, blank=True)
     studio = models.CharField(max_length=50, blank=True)
     slug = models.SlugField(max_length=255, editable=False)
