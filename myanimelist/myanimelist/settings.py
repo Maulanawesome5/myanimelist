@@ -45,6 +45,9 @@ INSTALLED_APPS = [
 
     # Modul untuk handling CORS
     "corsheaders",
+
+    # Django application
+    # "berita",
 ]
 
 MIDDLEWARE = [
