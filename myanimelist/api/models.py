@@ -22,3 +22,28 @@ class Anime(models.Model):
 
     class Meta:
         ordering = ["-updated"]
+
+
+class Berita(models.Model):
+    """
+    Class ini untuk membuat tabel database berupa konten artikel.
+    Ada 3 macam kategori artikel, yaitu hot_news, incoming_event, dan announcement.
+    Juga ada konten dummy, namun hanya untuk inisalisasi data.
+    """
+    content_title = models.CharField(max_length=100)
+    content_body = models.TextField()
+    writers = models.CharField(max_length=50)
+    content_category = models.CharField(max_length=50)
+    posted = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+    slug = models.SlugField(max_length=255, editable=False, unique=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.content_title)
+        super(Berita, self).save(*args, **kwargs)
+    
+    def __str__(self):
+        return f"{self.content_title}"
+
+    class Meta:
+        ordering = ["-posted"]

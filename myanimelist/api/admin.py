@@ -1,9 +1,12 @@
 from django.contrib import admin
+from .models import Anime, Berita
 
 # Register your models here.
-from .models import Anime
-
 class AnimeAdmin(admin.ModelAdmin):
     readonly_fields = ["slug", "updated", "created"]
 
-admin.site.register(Anime, AnimeAdmin)
+class BeritaAdmin(admin.ModelAdmin):
+    readonly_fields = ["slug", "posted", "updated"]
+
+admin.site.register(Anime, admin_class=AnimeAdmin)
+admin.site.register(Berita, admin_class=BeritaAdmin)
