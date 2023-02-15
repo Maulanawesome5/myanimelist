@@ -10,4 +10,7 @@ urlpatterns = [
     path('animelist/anime/<str:pk>/delete/', views.deleteAnime),
     path('animelist/anime/<str:pk>/', views.getAnimeByID),
     path('animelist/anime/<str:pk>/<str:inputSlug>/', views.getAnimeSlug),
+    path('berita/', views.getNews, name="berita"),
+    path('berita/<str:inputCategory>/', views.getNewsByCategory),
+    path('berita/<str:inputCategory>/<str:pk>/<str:inputSlug>/', views.getNewsDetail),
 ]

@@ -1,7 +1,7 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from .models import Anime
-from .serializers import AnimeSerializer
+from .models import Anime, Berita
+from .serializers import AnimeSerializer, BeritaSerializer
 
 
 @api_view(["GET"])
@@ -151,3 +151,39 @@ def deleteAnime(request, pk):
     anime = Anime.objects.get(id=pk)
     anime.delete()
     return Response("Data anime telah dihapus !")
+
+@api_view(["GET"])
+def getNews(request):
+    """
+    Function untuk menampilkan seluruh data berita yang ada di dalam database.
+    Contoh -> http://localhost:8000/berita/
+    """
+    berita = Berita.objects.all()
+    serializer = BeritaSerializer(berita, many=True)
+    return Response(serializer.data)
+
+@api_view(["GET"])
+def getNewsByCategory(request, inputCategory):
+    """
+    Function untuk memfilter berita berdasarkan kategori berita.
+    Contoh -> http://localhost:8000/berita/hot_news/
+    """
+    berita = Berita.objects.filter(content_category=inputCategory)
+    serializer = BeritaSerializer(berita, many=True)
+    return Response(serializer.data)
+
+@api_view(["GET"])
+def getNewsDetail(request, inputCategory, pk, inputSlug):
+    """
+    Function untuk menampilkan satu berita sesuai kategori, primary key, dan slug judul berita.
+    Studi kasus untuk hyperlink, menampilkan detail berita, dan menyalin URL konten tertentu.
+    Contoh -> http://localhost:8000/berita/hot_news/4/serial-boruto-dikabarkan-hiatus-masashi-fokus-remake/
+    """
+    berita = Berita.objects.get(
+        content_category=inputCategory,
+        id=pk,
+        slug=inputSlug
+    )
+    serializer = BeritaSerializer(berita, many=False)
+    return Response(serializer.data)
+
