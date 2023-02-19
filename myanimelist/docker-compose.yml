@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_DATABASE=django_anime
+      - MYSQL_USER=maulana
+      - MYSQL_PASSWORD=Mandala281
+      - MYSQL_ROOT_PASSWORD=root12345
+    volumes:
+      - db_data:/var/lib/mysql
+  
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/anime_indonesia/
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+volumes:
+  db_data:
