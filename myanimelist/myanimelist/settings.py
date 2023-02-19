@@ -53,6 +53,7 @@ INSTALLED_APPS = [
 
     # Django application
     # "berita",
+    # "api",
 ]
 
 MIDDLEWARE = [
@@ -73,7 +74,7 @@ ROOT_URLCONF = 'myanimelist.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

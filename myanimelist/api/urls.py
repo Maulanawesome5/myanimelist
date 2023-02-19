@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     path('', views.getRoutes, name="index"),
+    # path('', views.index),
     path('animelist/anime/', views.getAnime, name="animelist"),
     path('animelist/anime/create/', views.createAnime),
     path('animelist/anime/<str:pk>/update/', views.updateAnime),

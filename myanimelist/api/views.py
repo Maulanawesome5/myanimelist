@@ -2,7 +2,20 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .models import Anime, Berita
 from .serializers import AnimeSerializer, BeritaSerializer
+from django.shortcuts import render
 
+
+def index(request):
+    """
+    Function untuk menampilkan query data ke views HTML
+    """
+    anime = Anime.objects.all()
+    context = {
+        "judul" : "Api",
+        "website" : "MyAnimeList Indonesia",
+        "data_anime" : anime,
+    }
+    return render(request, "api/index.html", context)
 
 @api_view(["GET"])
 def getRoutes(reuqest):
