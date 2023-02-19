@@ -4,5 +4,6 @@
     "python.defaultInterpreterPath": ".\\Env\\Scripts\\python.exe",
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "workbench.colorTheme": "Dracula",
+    // "workbench.colorTheme": "Default Light+ Experimental",
     "workbench.iconTheme": "vscode-icons",
 }
