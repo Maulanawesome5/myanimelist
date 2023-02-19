@@ -3,3 +3,4 @@ db
 db.sqlite3
 commands.txt
 myanimelist/.env
+test
