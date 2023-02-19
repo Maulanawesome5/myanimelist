@@ -9,5 +9,6 @@ services:
     ports:
       - "8000:8000/tcp"
     image: aplikasi:django
-    container_name: app_animelist_2023
+    container_name: app_animelist
     command: python manage.py runserver 0.0.0.0:8000
+
