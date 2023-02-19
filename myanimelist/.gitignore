@@ -1,3 +1,4 @@
+backup/mariadb
 db
 db.sqlite3
 commands.txt
